@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -19,7 +20,7 @@ export default function ArtisansPage() {
         avatar: '/placeholder-artisan1.jpg',
         stats: {
           sales: 245,
-          followers: 1.2k,
+          followers: '1.2k',
           rating: 4.9
         }
       },
@@ -45,7 +46,7 @@ export default function ArtisansPage() {
         avatar: '/placeholder-artisan3.jpg',
         stats: {
           sales: 312,
-          followers: 2.1k,
+          followers: '2.1k',
           rating: 4.9
         }
       },
@@ -58,7 +59,7 @@ export default function ArtisansPage() {
         avatar: '/placeholder-artisan4.jpg',
         stats: {
           sales: 423,
-          followers: 1.7k,
+          followers: '1.7k',
           rating: 4.9
         }
       }

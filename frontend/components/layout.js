@@ -1,5 +1,6 @@
+import React from 'react';
 import Link from 'next/link';
-import { Menu, MenuIcon, XIcon } from '@heroicons/react/24/solid';
+import { Bars3Icon as MenuIcon, XMarkIcon as XIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
 export default function Layout({ children }) {
