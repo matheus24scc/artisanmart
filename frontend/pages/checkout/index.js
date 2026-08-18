@@ -441,7 +441,7 @@ export default function CheckoutPage() {
                     Your card will be charged for the total amount shown above.
                   </p>
                   <p className="text-sm text-gray-500">
-                    You'll receive an email confirmation once your order is processed.
+                    You&apos;ll receive an email confirmation once your order is processed.
                   </p>
                 </div>
                 
