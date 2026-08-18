@@ -36,6 +36,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# API routers (auth module lives under app/ and is wired into the app)
+from app.api.v1.endpoints.auth import router as auth_router
+
+app.include_router(auth_router, prefix="/api/v1/auth", tags=["auth"])
+
 # Security
 security = HTTPBearer()
 
