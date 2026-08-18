@@ -184,7 +184,7 @@ export default function CartPage() {
                     </button>
                   </div>
                   {discount > 0 && (
-                    <p className="text-green-600 text-sm">You've saved ${discount.toFixed(2)}!</p>
+                    <p className="text-green-600 text-sm">You&apos;ve saved ${discount.toFixed(2)}!</p>
                   )}
                 </div>
                 <div className="space-y-6">
