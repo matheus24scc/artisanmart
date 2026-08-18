@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
 from typing import Optional, Union
+from fastapi import Depends, status
+from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
