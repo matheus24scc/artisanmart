@@ -103,3 +103,11 @@ The application can be deployed to AWS ECS Fargate with RDS for PostgreSQL.
 ## License
 
 This project is licensed under the MIT License.
+## Status (checkup 2026-08-18)
+> Revisado na campanha de repo-checkup. Relatorio completo: `~/repo-checkup/reports/artisanmart.md` (local do mantenedor, nao no repo).
+- **Build/Install**: Backend `python -c "import main"` RC=0 (14 rotas) + `pytest` 2 passed (RC=0); Frontend `npm run build` RC=0 (9 paginas estaticas) + `next lint` RC=0.
+- **Smoke test**: `GET /health` -> 200 via TestClient (sem servicos externos); app inicia (14 rotas). `auth/register` retorna 500 sem Postgres (esperado).
+- **Para rodar de ponta-a-ponta precisa de**: PostgreSQL (via `docker-compose.yml`) para rotas `/api/v1/auth/*` e `/api/v1/users/*`.
+- **Inconsistencias conhecidas (README vs codigo)**: `SECRET_KEY` hardcoded em `app/core/security.py` (mover para env var); router de auth (`/api/v1/auth/*`) so funciona com Postgres.
+- **Seguranca**: Bump de seguranca `next@13.4.0` (critical) no frontend; backend 28 CVEs (fastapi/starlette/python-jose/python-multipart/python-dotenv/ecdsa) — nao auto-corrigido (decisao humana).
+- **Estado resumido**: build verde + smoke (import + 2 pytest + /health 200); runtime completo precisa de Postgres.
